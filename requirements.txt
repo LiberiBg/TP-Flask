@@ -1,0 +1,6 @@
+Flask
+psycopg2
+config
+Flask-RESTful
+Flask-Cors
+requests

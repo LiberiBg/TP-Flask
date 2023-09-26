@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  web:
+    build:
+      args:
+        - REQUIREMENTS_PATH=./requirements.txt
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - "./app:/var/www/html"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: rayan
+      POSTGRES_USER: rayan
+      POSTGRES_DB: database-etudiant
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+# Spécifiez le nom de projet personnalisé en utilisant la variable d'environnement COMPOSE_PROJECT_NAME
+x-environment:
+  COMPOSE_PROJECT_NAME: prog_avance
+
+  

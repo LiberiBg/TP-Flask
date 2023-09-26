@@ -1,0 +1,7 @@
+Commande connexion bdd:  psql -d database-etudiants rchouchane
+pip3 install flask
+
+
+python3 rest_api.py
+
+url navigateur : http://localhost:5050/books/get
