@@ -6,7 +6,7 @@ python3 rest_api.py
 
 url navigateur : http://localhost:5050/books/get
 
-
+python connect_pg.py
 
 RUN psql
 RUN \i script.sql;

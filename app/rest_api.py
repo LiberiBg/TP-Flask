@@ -100,6 +100,10 @@ def get_one_user(userId):
     return jsonify(returnStatement)
 
 
+@app.route('/')
+def hello():
+    return "Hello World"
+
 
 
 def get_users_statement(row) :
@@ -116,4 +120,4 @@ if __name__ == "__main__":
     # read server parameters
     params = config('config.ini', 'server')
     # Launch Flask server0
-    app.run(debug=params['debug'], host=params['host'], port=params['port'])
+    app.run(debug=params['debug'], host=params['host'])#, port=params['port']

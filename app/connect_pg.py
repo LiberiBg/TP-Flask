@@ -18,7 +18,7 @@ def connect(filename='config.ini', section='postgresql'):
         print(db_version)
         cur.close() # close the communication with the PostgreSQL
     except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
+        print("Echec Connexion BDD",error)
     finally:
         if conn is not None:
             return conn

@@ -11,6 +11,7 @@ COPY ./requirements.txt  usr/app/requirements.txt
 RUN pip install -r ./requirements.txt 
 
 
+EXPOSE 5050
 
 # Commande d'exécution de votre application Flask
 CMD ["python", "rest_api.py"]

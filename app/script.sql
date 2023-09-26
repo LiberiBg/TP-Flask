@@ -48,7 +48,7 @@ INSERT INTO public.books (id,title,author,editor,date_publication,summary,cover)
      (1,'Les Misérables','Victor Hugo','Hachette',NULL,'Test 2',NULL),
      (2,'le horla','Maupassant','Gallimard','1889-12-01','Test',NULL),
      (3,'Là où les zeubs les ecrevisses','Delia Owens','Seuil','2021-08-01','Long texte','{"uri": "/img/cover_owens.jpg", "type": "jpeg", "caption": "Légende de l''image", "description": "Une image de couverture"}');
-﻿
+
 
 --Users
 
