@@ -1,7 +1,21 @@
-Commande connexion bdd:  psql -d database-etudiants rchouchane
+Commande connexion bdd:  
 pip3 install flask
 
 
 python3 rest_api.py
 
 url navigateur : http://localhost:5050/books/get
+
+
+
+RUN psql
+RUN \i script.sql;
+
+
+pour se connecter a adminer: 
+
+Systeme: Postgre
+Serveur	: db
+Utilisateur	: rayan
+Mot de passe: rayan	
+Base de données : database-etudiant ou rien

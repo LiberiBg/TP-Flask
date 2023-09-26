@@ -19,6 +19,8 @@ services:
       POSTGRES_PASSWORD: rayan
       POSTGRES_USER: rayan
       POSTGRES_DB: database-etudiant
+    volumes:
+      - "./app/script.sql:/docker-entrypoint-initdb.d/script.sql" 
 
   adminer:
     image: adminer
