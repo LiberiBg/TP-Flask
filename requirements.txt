@@ -4,3 +4,4 @@ config
 Flask-RESTful
 Flask-Cors
 requests
+python-dotenv

@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import psycopg2
 from config import config
+import os
+from dotenv import load_dotenv
 
 #Fichier pour faire le lien avec la BDD
 def connect(filename='config.ini', section='postgresql'):
@@ -9,7 +11,7 @@ def connect(filename='config.ini', section='postgresql'):
     try:
         params = config(filename, section) # read connection parameters
         print('Connecting to the PostgreSQL database...')
-        conn = psycopg2.connect(**params) # connect to the PostgreSQL server
+        conn = psycopg2.connect(**params, host=os.getenv("DB_HOST")) # connect to the PostgreSQL server 
         conn.set_client_encoding('UTF8')
         cur = conn.cursor() # create a cursor
         print('PostgreSQL database version:')

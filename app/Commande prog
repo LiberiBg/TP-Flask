@@ -4,9 +4,8 @@ pip3 install flask
 
 python3 rest_api.py
 
-url navigateur : http://localhost:5050/books/get
+url navigateur : http://localhost:5500/books/search/a
 
-python connect_pg.py
 
 RUN psql
 RUN \i script.sql;
@@ -19,3 +18,8 @@ Serveur	: db
 Utilisateur	: rayan
 Mot de passe: rayan	
 Base de données : database-etudiant ou rien
+
+
+Commandes Docker:
+    Lancement: docker-compose up --build
+    Suppression: docker-compose down
